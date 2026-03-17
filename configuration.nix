@@ -11,14 +11,6 @@
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  programs.git = {
-    enable = true;
-    settings.user = {
-        name  = "LodWKobku";
-        email = "lodwkobku@gmail.com";
-    };
-  };
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
