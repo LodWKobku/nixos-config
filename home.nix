@@ -12,5 +12,8 @@
 			email = "lodwkobku@gmail.com";
 		};
 	};
+
+	#Stylix
+	stylix.targets.kde.enable = true;
 }
 
