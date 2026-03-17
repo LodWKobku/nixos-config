@@ -13,6 +13,10 @@
 
   programs.git = {
     enable = true;
+    settings.user = {
+        name  = "LodWKobku";
+        email = "lodwkobku@gmail.com";
+    };
   };
 
   # Bootloader.
