@@ -129,6 +129,14 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+
+  #Stylix
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+    image = "${pkgs.nixos-artwork}/wallpapers/nix-wallpaper-nineish-catppuccin-frappe.png";
+  };
+
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
