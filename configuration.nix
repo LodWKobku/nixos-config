@@ -132,9 +132,9 @@
 
   #Stylix
   stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
-    image = "${pkgs.nixos-artwork}/wallpapers/nix-wallpaper-nineish-catppuccin-frappe.png";
+      enable = true;
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+# 		image = "${pkgs.nixos-artwork}/wallpapers/nix-wallpaper-nineish-catppuccin-frappe.png";
   };
 
   system.stateVersion = "25.11"; # Did you read the comment?
