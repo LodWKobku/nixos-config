@@ -17,7 +17,6 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -149,6 +148,11 @@
     # Other general flags if available can be set here.
   };
 
+  #Flatpak
+  services.flatpak.enable = true;
+  services.flatpak.packages = [
+      "com.heroicgameslauncher.hgl"
+  ];
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
