@@ -90,9 +90,9 @@
       };
       settings.globalOptions = {
         "Hotkey" = {
-          EnumerateWithTriggerKeys=True;
-          EnumerateSkipFirst=False;
-          ModifierOnlyKeyTimeout=250;
+          EnumerateWithTriggerKeys="True";
+          EnumerateSkipFirst="False";
+          ModifierOnlyKeyTimeout="250";
         };
         "Hotkey/TriggerKeys" = {
           "0"="Alt+Shift+Shift_R";
