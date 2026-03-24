@@ -13,6 +13,12 @@
 		};
 	};
 
+	#Plasma
+# 	programs.plasma = {
+# 		enable = true;
+# 		configFile.kwinrc.Wayland."InputMethod[$e]" = "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
+# 	};
+
 	#Stylix
 	stylix.targets.kde.enable = true;
 }
