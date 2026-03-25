@@ -13,7 +13,17 @@
 		};
 	};
 
-	#Plasma
+	#VS Code
+	programs.vscode = {
+		enable = true;
+		profiles.default.extensions = with pkgs.vscode-extensions; [
+			mhutchie.git-graph
+			ms-python.python
+			bbenoist.nix
+		];
+	};
+
+# 	#Plasma
 # 	programs.plasma = {
 # 		enable = true;
 # 		configFile.kwinrc.Wayland."InputMethod[$e]" = "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
