@@ -213,6 +213,11 @@
     # Other general flags if available can be set here.
   };
 
+  # OBS
+  programs.obs-studio = {
+    enable = true;
+  };
+
   #Flatpak
   services.flatpak.enable = true;
   services.flatpak.packages = [
