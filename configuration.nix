@@ -157,6 +157,7 @@
      pkgs.gh # Github CLI
      pkgs.gemini-cli
      pkgs.aider-chat-full # aider gemini cli alternative
+     pkgs.atlauncher # Minecraft Launcher
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
