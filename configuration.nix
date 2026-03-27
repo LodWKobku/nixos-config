@@ -158,6 +158,8 @@
      pkgs.gemini-cli
      pkgs.aider-chat-full # aider gemini cli alternative
      pkgs.atlauncher # Minecraft Launcher
+     pkgs.python313Packages.kernels # Huggingface CLI
+     pkgs.python313Packages.modelscope # Modelscope CLI
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
