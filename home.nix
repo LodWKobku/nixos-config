@@ -24,7 +24,7 @@
 			catppuccin.catppuccin-vsc-icons
 			];
 			userSettings = {
-			"workbench.iconTheme" = "catppuccin-frape";
+				"workbench.iconTheme" = "catppuccin-frappe";
 			};
 		};
 	};
