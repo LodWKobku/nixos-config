@@ -224,6 +224,7 @@
   services.flatpak.enable = true;
   services.flatpak.packages = [
       "com.heroicgameslauncher.hgl"
+      "org.freedownloadmanager.Manager"
   ];
   system.stateVersion = "25.11"; # Did you read the comment?
 
