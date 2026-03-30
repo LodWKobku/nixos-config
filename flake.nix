@@ -30,7 +30,7 @@
             {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.backupFileExtension = "backup";
+                # home-manager.backupFileExtension = "backup";
                 home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
                 home-manager.users.user = ./home.nix;
         }

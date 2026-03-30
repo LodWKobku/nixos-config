@@ -16,11 +16,17 @@
 	#VS Code
 	programs.vscode = {
 		enable = true;
-		profiles.default.extensions = with pkgs.vscode-extensions; [
+		profiles.default = {
+			extensions = with pkgs.vscode-extensions; [
 			mhutchie.git-graph
 			ms-python.python
 			bbenoist.nix
-		];
+			catppuccin.catppuccin-vsc-icons
+			];
+			userSettings = {
+			"workbench.iconTheme" = "catppuccin-frape";
+			};
+		};
 	};
 
 # 	#Plasma
