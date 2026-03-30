@@ -161,6 +161,7 @@
      pkgs.atlauncher # Minecraft Launcher
      pkgs.python313Packages.kernels # Huggingface CLI
      pkgs.python313Packages.modelscope # Modelscope CLI
+     pkgs.pear-desktop # Youtube music app
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
