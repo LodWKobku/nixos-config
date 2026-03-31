@@ -37,13 +37,8 @@
 			"Module-gtkconfig"."autoload" = false;
 		};
 	};
-	# Remove clogged backup .gtkrc2 file before rebuilding 
-	home.activation.deleteGtkrc2 = lib.hm.dag.entryBefore ["writeBoundary"] ''
-		if [ -f "${config.home.homeDirectory}/.gtkrc-2.0.backup ]; then
-			rm -f "${config.home.homeDirectory}/.gtkrc-2.0.backup"
-		fi
-	'';
-
+	home.file.".gtkrc-2.0".enable = false;
+	
 	#Stylix
 	stylix.targets.kde.enable = true;
 }
