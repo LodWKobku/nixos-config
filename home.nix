@@ -37,7 +37,7 @@
 			"Module-gtkconfig"."autoload" = false;
 		};
 	};
-	home.file.".gtkrc-2.0".enable = false;
+	home.file.".gtkrc-2.0.backup".enable = false;
 	
 	#Stylix
 	stylix.targets.kde.enable = true;

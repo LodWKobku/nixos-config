@@ -74,9 +74,9 @@
         "Groups/0" = {
           Name = "Default";
           "Default Layout" = "us";
-          DefaultIM = "keyboard-us";
+          DefaultIM = "keyboard-pl";
         };
-        "Groups/0/Items/0".Name="keyboard-us";
+        "Groups/0/Items/0".Name="keyboard-pl";
 
         # Group 2 (for chinese)
         GroupOrder."1" = "Chinski";
