@@ -162,6 +162,8 @@
      pkgs.python313Packages.kernels # Huggingface CLI
      pkgs.python313Packages.modelscope # Modelscope CLI
      pkgs.pear-desktop # Youtube music app
+     pkgs.gnome-calculator # Calculator
+     pkgs.gnome-clocks # Clock
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
