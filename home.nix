@@ -37,9 +37,8 @@
 			"Module-gtkconfig"."autoload" = false;
 		};
 	};
-	home.file.".gtkrc-2.0.backup".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.gtkrc-2.0.backup";
-	home.file.".gtkrc-2.0.backup".force = true;
-	
+	gtk.gtk2.force = true;
+
 	#Stylix
 	stylix.targets.kde.enable = true;
 }
