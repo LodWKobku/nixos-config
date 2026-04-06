@@ -34,8 +34,8 @@
 		enable = true;
 		configFile.kwinrc = {
 			Wayland."InputMethod[$e]" = "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
-			"Module-gtkconfig"."autoload" = false;
 		};
+		kwin.effects.shakeCursor.enable = false; # Disable shake cursor disability feature
 	};
 	gtk.gtk2.force = true;
 
