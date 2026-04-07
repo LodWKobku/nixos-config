@@ -33,9 +33,17 @@
 	programs.plasma = {
 		enable = true;
 		configFile.kwinrc = {
+			# Autoenable fcitx5 digital keyboard (for chinese characters)
 			Wayland."InputMethod[$e]" = "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
 		};
 		kwin.effects.shakeCursor.enable = false; # Disable shake cursor disability feature
+		
+		panels = [ # Customize panel
+			{
+				location = "bottom";
+				lengthMode = "fill";
+			}
+		];
 	};
 	gtk.gtk2.force = true;
 
