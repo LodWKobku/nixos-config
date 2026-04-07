@@ -38,12 +38,43 @@
 		};
 		kwin.effects.shakeCursor.enable = false; # Disable shake cursor disability feature
 		
+		desktop = { #Customize desktop
+			widgets = [
+				{	# Digital clock
+					config = {
+						Appearance = {
+							showDate = true;
+						};
+					};
+					name = "org.kde.plasma.digitalclock";
+					position = {
+						horizontal = 176;
+						vertical = 64;
+					};
+					size = {
+						height = 250;
+						width = 250;
+					};
+				}
+			];
+		};
+
 		panels = [ # Customize panel
 			{
 				location = "bottom";
 				lengthMode = "fill";
+				widgets = [
+					"org.kde.plasma.kickoff"
+					"org.kde.plasma.pager"
+					"org.kde.plasma.icontasks"
+					"org.kde.plasma.marginsseparator"
+					"org.kde.plasma.systemtray"
+					"org.kde.plasma.digitalclock"
+					"org.kde.plasma.showdesktop"
+				];
 			}
 		];
+
 	};
 	gtk.gtk2.force = true;
 
