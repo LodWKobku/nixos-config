@@ -38,6 +38,8 @@
 		};
 		kwin.effects.shakeCursor.enable = false; # Disable shake cursor disability feature
 		
+		overrideConfig = true;
+		# resetFiles = ["plasma-org.kde.plasma.desktop-appletsrc"];
 		desktop = { #Customize desktop
 			widgets = [
 				{	# Digital clock
