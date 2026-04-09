@@ -180,6 +180,7 @@
      pkgs.pear-desktop # Youtube music app
      pkgs.gnome-calculator # Calculator
      pkgs.gnome-clocks # Clock
+     pkgs.heroic # Heroic game launcher
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -243,7 +244,6 @@
   #Flatpak
   services.flatpak.enable = true;
   services.flatpak.packages = [
-      "com.heroicgameslauncher.hgl"
       "org.freedownloadmanager.Manager"
   ];
   system.stateVersion = "25.11"; # Did you read the comment?
