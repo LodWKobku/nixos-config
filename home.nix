@@ -37,7 +37,8 @@
 			Wayland."InputMethod[$e]" = "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
 		};
 		kwin.effects.shakeCursor.enable = false; # Disable shake cursor disability feature
-		
+		session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession"; # Disable automaticly restoring apps from last session
+
 		overrideConfig = true;
 		# resetFiles = ["plasma-org.kde.plasma.desktop-appletsrc"];
 		desktop = { #Customize desktop
