@@ -121,7 +121,7 @@
 	# Create a desktop folders
 	home.file."DesktopFolders/Programs/.keep".text = "";
 	home.file."DesktopFolders/Games/.keep".text = "";
-	home.file."DesktopFolders/Programs/steam.desktop".source = "${pkgs.steam}/share/applications/steam.desktop";
+	home.file."DesktopFolders/Programs/Steam".source = "${pkgs.steam}/share/applications/steam.desktop";
 
 	#Stylix
 	stylix.targets.kde.enable = true;
