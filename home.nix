@@ -64,6 +64,13 @@
 				}
 				{
 					name = "org.kde.plasma.folder";
+					config = {
+						General = {
+							labelMode=3;
+							labelText="Programs";
+							url="file:///home/user/DesktopFolders/Programs";
+						};
+					};
 					position = {
 						horizontal = 64;
 						vertical = 272;
@@ -75,6 +82,13 @@
 				}
 				{
 					name = "org.kde.plasma.folder";
+					config = {
+						General = {
+							labelMode=3;
+							labelText="Games";
+							url="file:///home/user/DesktopFolders/Games";
+						};
+					};
 					position = {
 						horizontal = 64;
 						vertical = 624;
