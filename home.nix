@@ -119,26 +119,9 @@
 
 	};
 	# Create a desktop folders
-	home.file = let
-		# Helper to flatten nested sets into path-keyed sets for home.file
-		flatten = prefix: attrs:
-			lib.concatMapAttrs (name: value:
-				let path = if prefix == "" then name else "${prefix}/${name}"; in
-				if lib.isAttrs value && !(value ? text || value ? source)
-				then flatten path value
-				else { "${path}" = value; }
-			) attrs;
-	in flatten "DesktopFolders" {
-		Programs = {
-			".keep".text = "";
-			"placeholder.txt".text = "This is a placeholder for programs.";
-		};
-		Games = {
-			".keep".text = "";
-			"placeholder.txt".text = "This is a placeholder for games.";
-		};
-	};
-	
+	home.file."DesktopFolders/Programs/.keep".text = "";
+	home.file."DesktopFolders/Games/.keep".text = "";
+	home.file."DesktopFolders/Programs/steam.desktop".source = "${pkgs.steam}/share/applications/steam.desktop";
 
 	#Stylix
 	stylix.targets.kde.enable = true;
