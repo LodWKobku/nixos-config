@@ -32,9 +32,12 @@
 	#Plasma
 	programs.plasma = {
 		enable = true;
-		configFile.kwinrc = {
+		configFile."kwinrc".Wayland = {
 			# Autoenable fcitx5 digital keyboard (for chinese characters)
-			Wayland."InputMethod[$e]" = "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
+			"InputMethod" = {
+				shellExpand = true;
+				value = "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
+			};
 		};
 		kwin.effects.shakeCursor.enable = false; # Disable shake cursor disability feature
 		session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession"; # Disable automaticly restoring apps from last session
