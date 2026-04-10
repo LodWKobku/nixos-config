@@ -54,12 +54,34 @@
 					};
 					name = "org.kde.plasma.digitalclock";
 					position = {
-						horizontal = 176;
-						vertical = 64;
+						horizontal = 272;
+						vertical = 15;
 					};
 					size = {
 						height = 250;
 						width = 250;
+					};
+				}
+				{
+					name = "org.kde.plasma.folder";
+					position = {
+						horizontal = 64;
+						vertical = 272;
+					};
+					size = {
+						height = 352;
+						width = 656;
+					};
+				}
+				{
+					name = "org.kde.plasma.folder";
+					position = {
+						horizontal = 64;
+						vertical = 624;
+					};
+					size = {
+						height = 352;
+						width = 656;
 					};
 				}
 			];
