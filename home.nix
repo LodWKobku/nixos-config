@@ -83,7 +83,9 @@
 
 	};
 	#Desktop Files
-	home.file."Desktop/Steam".source = "${pkgs.steam}/share/applications/steam.desktop";
+	home.file."Desktop/Steam.desktop".source = "${pkgs.steam}/share/applications/steam.desktop";
+	home.file."Desktop/Heroic Game Launcher.desktop".source = "${pkgs.heroic}/share/applications/com.heroicgameslauncher.hgl.desktop";
+	home.file."Desktop/ATlauncher.desktop".source = "${pkgs.atlauncher}/share/applications/atlauncher.desktop";
 	
 	#Stylix
 	stylix.targets.kde.enable = true;
