@@ -82,6 +82,8 @@
 		];
 
 	};
+	#Desktop Files
+	home.file."Desktop/Steam".source = "${pkgs.steam}/share/applications/steam.desktop";
 	
 	#Stylix
 	stylix.targets.kde.enable = true;
