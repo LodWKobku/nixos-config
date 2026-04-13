@@ -62,42 +62,6 @@
 						width = 250;
 					};
 				}
-				{
-					name = "org.kde.plasma.folder";
-					config = {
-						General = {
-							labelMode=3;
-							labelText="Programs";
-							url="file:///home/user/DesktopFolders/Programs";
-						};
-					};
-					position = {
-						horizontal = 64;
-						vertical = 272;
-					};
-					size = {
-						height = 352;
-						width = 656;
-					};
-				}
-				{
-					name = "org.kde.plasma.folder";
-					config = {
-						General = {
-							labelMode=3;
-							labelText="Games";
-							url="file:///home/user/DesktopFolders/Games";
-						};
-					};
-					position = {
-						horizontal = 64;
-						vertical = 624;
-					};
-					size = {
-						height = 352;
-						width = 656;
-					};
-				}
 			];
 		};
 
@@ -118,11 +82,7 @@
 		];
 
 	};
-	# Create a desktop folders
-	home.file."DesktopFolders/Programs/.keep".text = "";
-	home.file."DesktopFolders/Games/.keep".text = "";
-	home.file."DesktopFolders/Programs/Steam".source = "${pkgs.steam}/share/applications/steam.desktop";
-
+	
 	#Stylix
 	stylix.targets.kde.enable = true;
 	gtk.gtk2.force = true;
