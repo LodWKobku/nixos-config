@@ -61,12 +61,12 @@
 					};
 					name = "org.kde.plasma.digitalclock";
 					position = {
-						horizontal = 272;
-						vertical = 15;
+						horizontal = 1296;
+						vertical = 47;
 					};
 					size = {
-						height = 250;
-						width = 250;
+						height = 400;
+						width = 368;
 					};
 				}
 			];
