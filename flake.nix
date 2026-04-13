@@ -14,16 +14,21 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {  # For finding files in nix store
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, stylix, nix-flatpak, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, stylix, nix-flatpak, nix-index-database, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         nix-flatpak.nixosModules.nix-flatpak
+        nix-index-database.nixosModules.default
         stylix.nixosModules.stylix
         ./configuration.nix
         home-manager.nixosModules.home-manager
