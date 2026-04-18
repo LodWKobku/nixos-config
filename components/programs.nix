@@ -5,7 +5,6 @@
      pkgs.gh # Github CLI
      pkgs.gemini-cli
      pkgs.aider-chat-full # aider gemini cli alternative
-     pkgs.atlauncher # Minecraft Launcher
      pkgs.prismlauncher # Another Minecraft Launcher
      pkgs.python313Packages.kernels # Huggingface CLI
      pkgs.python313Packages.modelscope # Modelscope CLI
