@@ -6,12 +6,14 @@
      pkgs.gemini-cli
      pkgs.aider-chat-full # aider gemini cli alternative
      pkgs.atlauncher # Minecraft Launcher
+     pkgs.prismlauncher # Another Minecraft Launcher
      pkgs.python313Packages.kernels # Huggingface CLI
      pkgs.python313Packages.modelscope # Modelscope CLI
      pkgs.pear-desktop # Youtube music app
      pkgs.gnome-calculator # Calculator
      pkgs.gnome-clocks # Clock
      pkgs.heroic # Heroic game launcher
+     
   ];
 
   # Firefox.
