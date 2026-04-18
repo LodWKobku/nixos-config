@@ -12,7 +12,7 @@
      pkgs.gnome-calculator # Calculator
      pkgs.gnome-clocks # Clock
      pkgs.heroic # Heroic game launcher
-     
+     pkgs.nmap # Tool for analizing network
   ];
 
   # Firefox.
