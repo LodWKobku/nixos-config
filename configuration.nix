@@ -36,10 +36,6 @@
     allowedTCPPorts = [ 12345 ];
   };
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
   # Enable sound with pipewire.
   hardware.bluetooth.enable = true;
   services.pulseaudio.enable = false;
