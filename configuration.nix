@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
@@ -11,6 +11,7 @@
       ./components/keyboard.nix
       ./components/printing.nix
       ./components/programs.nix
+      inputs.hyprland.nixosModules.default
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -61,6 +62,11 @@
     packages = with pkgs; [
       kdePackages.kate
     ];
+  };
+
+  programs.hyprland = {
+    enable = true;
+    
   };
 
   # Allow unfree packages
