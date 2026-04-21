@@ -5,11 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
     nix-index-database = {  # For finding files in nix store
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +12,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, stylix, nix-flatpak, nix-index-database, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, nix-index-database, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
@@ -25,14 +20,12 @@
         # so the old configuration file still takes effect
         nix-flatpak.nixosModules.nix-flatpak
         nix-index-database.nixosModules.default
-        stylix.nixosModules.stylix
         ./configuration.nix
         home-manager.nixosModules.home-manager
             {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 # home-manager.backupFileExtension = "backup";
-                home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
                 home-manager.users.user = ./home.nix;
         }
       ];
