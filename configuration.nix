@@ -65,7 +65,7 @@
 
   programs.hyprland = {
     enable = true;
-
+    xwayland.enable = true;
   };
 
   # Allow unfree packages
