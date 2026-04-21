@@ -57,6 +57,7 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
+    initialPassword = "user";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
