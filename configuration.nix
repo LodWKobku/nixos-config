@@ -64,11 +64,14 @@
     ];
   };
 
+  #Hyprland
   programs.hyprland = {
     enable = true;
     withUWSM = true;
     xwayland.enable = true;
   };
+  #Waybar
+  programs.waybar.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
