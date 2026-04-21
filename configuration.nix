@@ -11,7 +11,6 @@
       ./components/keyboard.nix
       ./components/printing.nix
       ./components/programs.nix
-      inputs.hyprland.nixosModules.default
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -66,7 +65,7 @@
 
   programs.hyprland = {
     enable = true;
-    
+
   };
 
   # Allow unfree packages
