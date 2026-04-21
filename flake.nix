@@ -10,10 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-index-database = {  # For finding files in nix store
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";

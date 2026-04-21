@@ -94,9 +94,5 @@
 	home.file."Desktop/Heroic Game Launcher.desktop".source = "${pkgs.heroic}/share/applications/com.heroicgameslauncher.hgl.desktop";
 	home.file."Desktop/PrismLauncher.desktop".source = "${pkgs.prismlauncher}/share/applications/org.prismlauncher.PrismLauncher.desktop";
 	home.file."Desktop/Discord.desktop".source = "${pkgs.discord}/share/applications/discord.desktop";
-	
-	#Stylix
-	stylix.targets.kde.enable = true;
-	gtk.gtk2.force = true;
 }
 
