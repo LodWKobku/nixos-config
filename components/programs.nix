@@ -13,7 +13,9 @@
      pkgs.gnome-clocks # Clock
      pkgs.heroic # Heroic game launcher
      pkgs.nmap # Tool for analizing network
+     
      pkgs.kitty # required for the default Hyprland config
+     pkgs.networkmanagerapplet # For configuring network
   ];
 
   # Firefox.
