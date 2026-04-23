@@ -4,7 +4,7 @@
         enable = true;
         settings = {
             exec-once = [
-                "${pkgs.waybar}/bin/waybar"
+                "waybar"
             ];
         };
     };
