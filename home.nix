@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+	imports = [
+		./components/home-manager/hyprland.nix
+	];
+
 	home.username = "user";
  	home.homeDirectory = "/home/user";
 	home.stateVersion = "25.11";
@@ -12,7 +16,7 @@
 			email = "lodwkobku@gmail.com";
 		};
 	};
-
+	
 	#VS Code
 	programs.vscode = {
 		enable = true;
