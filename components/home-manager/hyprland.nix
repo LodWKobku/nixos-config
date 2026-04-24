@@ -2,7 +2,6 @@
 {
     wayland.windowManager.hyprland = {
         enable = true;
-        systemd.enable = false;
     
         settings = {
             exec-once = [
@@ -10,6 +9,7 @@
             ];
         };
     };
+    xdg.configFile."uwsm/env".source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh"; 
 
     programs.waybar = {
         enable = true;
