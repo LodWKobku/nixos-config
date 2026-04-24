@@ -61,7 +61,7 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "user-with-access-to-virtualbox" ];
     packages = with pkgs; [
       kdePackages.kate
     ];

@@ -6,7 +6,7 @@
      pkgs.gemini-cli
      pkgs.aider-chat-full # aider gemini cli alternative
      pkgs.prismlauncher # Another Minecraft Launcher
-     pkgs.python313Packages.kernels # Huggingface CLI
+     pkgs.python313Packages.huggingface-hub # Huggingface CLI
      pkgs.python313Packages.modelscope # Modelscope CLI
      pkgs.pear-desktop # Youtube music app
      pkgs.gnome-calculator # Calculator
@@ -18,6 +18,12 @@
   # Firefox.
   programs.firefox.enable = true;
 
+  # Virtual Box
+  virtualisation.virtualbox.host = {
+    enable = true;
+    enableExtensionPack = true;
+  };
+  
   # Nh (nix helper)
   programs.nh = {
     enable = true;
