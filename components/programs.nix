@@ -13,6 +13,7 @@
      pkgs.heroic # Heroic game launcher
      pkgs.nmap # Tool for analizing network
      deskflow # For usin one keyboard and mouse on two computers
+     wl-clipboard # Clipboard support for deskflow
   ];
 
   # Firefox.
