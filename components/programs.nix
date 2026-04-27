@@ -14,10 +14,17 @@
      pkgs.nmap # Tool for analizing network
      deskflow # For usin one keyboard and mouse on two computers
      wl-clipboard # Clipboard support for deskflow
+     pkgs.uget # Download manager
   ];
 
   # Firefox.
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    preferences = {
+      "ui.key.menuAccessKeyFocuses" = false;
+    };
+    nativeMessagingHosts.packages = [ pkgs.uget-integrator ];
+  };
 
   # Virtual Box
   virtualisation.virtualbox.host = {
