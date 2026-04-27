@@ -13,6 +13,7 @@
      pkgs.gnome-clocks # Clock
      pkgs.heroic # Heroic game launcher
      pkgs.nmap # Tool for analizing network
+     deskflow # For usin one keyboard and mouse on two computers
   ];
 
   # Firefox.

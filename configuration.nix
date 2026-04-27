@@ -34,7 +34,8 @@
   #Firewall
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 12345 ];
+    allowedTCPPorts = [ 12345 24800 ];
+    allowedUDPPorts = [ 24800 ];
   };
 
   # Enable the KDE Plasma Desktop Environment.
