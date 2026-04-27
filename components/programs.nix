@@ -2,7 +2,6 @@
 {
   # Installed packages
   environment.systemPackages = with pkgs; [
-     pkgs.gh # Github CLI
      pkgs.gemini-cli
      pkgs.aider-chat-full # aider gemini cli alternative
      pkgs.prismlauncher # Another Minecraft Launcher

@@ -12,6 +12,12 @@
 			email = "lodwkobku@gmail.com";
 		};
 	};
+	programs.gh = {
+		enable = true;
+		gitCredentialHelper = {
+			enable = true;
+		};
+	};
 
 	#VS Code
 	programs.vscode = {
