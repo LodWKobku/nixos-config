@@ -2,19 +2,19 @@
 {
   # Installed packages
   environment.systemPackages = with pkgs; [
-     pkgs.gemini-cli
-     pkgs.aider-chat-full # aider gemini cli alternative
-     pkgs.prismlauncher # Another Minecraft Launcher
-     pkgs.python313Packages.huggingface-hub # Huggingface CLI
-     pkgs.python313Packages.modelscope # Modelscope CLI
-     pkgs.pear-desktop # Youtube music app
-     pkgs.gnome-calculator # Calculator
-     pkgs.gnome-clocks # Clock
-     pkgs.heroic # Heroic game launcher
-     pkgs.nmap # Tool for analizing network
+     gemini-cli
+     aider-chat-full # aider gemini cli alternative
+     prismlauncher # Another Minecraft Launcher
+     python313Packages.huggingface-hub # Huggingface CLI
+     python313Packages.modelscope # Modelscope CLI
+     pear-desktop # Youtube music app
+     gnome-calculator # Calculator
+     gnome-clocks # Clock
+     heroic # Heroic game launcher
+     nmap # Tool for analizing network
      deskflow # For usin one keyboard and mouse on two computers
      wl-clipboard # Clipboard support for deskflow
-     pkgs.uget # Download manager
+     uget # Download manager
   ];
 
   # Firefox.
