@@ -4,14 +4,12 @@
         enable = true;
 
         settings = {
-            "$mod" = "SUPER";
             bind = [
-                "$mod, Super_L, exec, pkill rofi || ${pkgs.rofi}/bin/rofi -show drun"
+                "CONTROL, L, exec, pkill rofi || ${pkgs.rofi}/bin/rofi -show drun"
             ];
 
             exec-once = [
                 "${pkgs.waybar}/bin/waybar"
-
             ];
         };
     };
