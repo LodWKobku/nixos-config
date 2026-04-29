@@ -71,6 +71,10 @@
     xwayland.enable = true;
   };
 
+  # Fonts
+  fonts.packages = with pkgs; [
+    noto-fonts-cjk-sans
+  ];
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
