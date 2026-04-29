@@ -10,6 +10,7 @@
 
             exec-once = [
                 "${pkgs.waybar}/bin/waybar"
+                "${pkgs.networkmanagerapplet}/bin/nm-applet"
             ];
         };
     };
