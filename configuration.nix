@@ -63,7 +63,6 @@
   users.users.user = {
     isNormalUser = true;
     initialPassword = "user";
-    mutableUsers = false;
     description = "user";
     extraGroups = [ "networkmanager" "wheel" "user-with-access-to-virtualbox" ];
     packages = with pkgs; [
