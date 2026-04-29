@@ -73,6 +73,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Fonts
+  fonts.packages = with pkgs; [
+    noto-fonts-cjk-sans
+  ];
+  
   # Stylix
   stylix = {
       enable = true;
