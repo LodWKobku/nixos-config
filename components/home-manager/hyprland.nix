@@ -6,6 +6,7 @@
         settings = {
             bind = [
                 "CONTROL, L, exec, pkill rofi || ${pkgs.rofi}/bin/rofi -show drun"
+                "CONTROL, T, exec, ${pkgs.kitty}/bin/kitty"
             ];
 
             exec-once = [
