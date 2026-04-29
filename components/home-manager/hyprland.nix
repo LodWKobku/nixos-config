@@ -5,7 +5,7 @@
     
         settings = {
             exec-once = [
-                "waybar"
+                "${pkgs.waybar}/bin/waybar"
             ];
         };
     };
