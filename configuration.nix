@@ -62,6 +62,8 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.user = {
     isNormalUser = true;
+    initialPassword = "user";
+    mutableUsers = false;
     description = "user";
     extraGroups = [ "networkmanager" "wheel" "user-with-access-to-virtualbox" ];
     packages = with pkgs; [
