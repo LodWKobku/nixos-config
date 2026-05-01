@@ -80,7 +80,7 @@
  
   # Virtual machine settings
   virtualisation.vmVariant = {
-    virtualisation.memorySize = 4096;
+    virtualisation.memorySize = 8192;
   };
 
   system.stateVersion = "25.11";
