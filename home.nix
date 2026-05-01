@@ -40,6 +40,9 @@
 		settings.SKIP_HOST_UPDATE = true;
 	};
 
+	#Fastfetch
+	programs.fastfetch.enable = true;
+	
 	#Desktop Files
 	home.file."Desktop/Steam.desktop".source = "${pkgs.steam}/share/applications/steam.desktop";
 	home.file."Desktop/Heroic Game Launcher.desktop".source = "${pkgs.heroic}/share/applications/com.heroicgameslauncher.hgl.desktop";
