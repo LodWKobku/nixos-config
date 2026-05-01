@@ -42,6 +42,10 @@
 		settings.SKIP_HOST_UPDATE = true;
 	};
 
+	#Fastfetch
+	programs.fastfetch.enable = true;
+	
+
 	#Plasma
 	programs.plasma = {
 		enable = true;
