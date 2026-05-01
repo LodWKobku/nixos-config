@@ -77,7 +77,12 @@
   fonts.packages = with pkgs; [
     noto-fonts-cjk-sans
   ];
-  
+
+  # Virtual machine settings
+  virtualisation.vmVariant = {
+    virtualisation.memorySize = 4096;
+  };
+
   # Stylix
   stylix = {
       enable = true;
