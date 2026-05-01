@@ -77,6 +77,11 @@
   ];
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+ 
+  # Virtual machine settings
+  virtualisation.vmVariant = {
+    virtualisation.memorySize = 4096;
+  };
 
   system.stateVersion = "25.11";
 }
