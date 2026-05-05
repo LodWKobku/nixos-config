@@ -24,10 +24,11 @@
 		enable = true;
 		profiles.default = {
 			extensions = with pkgs.vscode-extensions; [
-			mhutchie.git-graph
-			ms-python.python
-			bbenoist.nix
-			catppuccin.catppuccin-vsc-icons
+				mhutchie.git-graph
+				ms-python.python
+				bbenoist.nix
+				catppuccin.catppuccin-vsc-icons
+				ms-vscode-remote.remote-containers # dev containters
 			];
 			userSettings = {
 				"workbench.iconTheme" = "catppuccin-frappe";
