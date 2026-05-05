@@ -64,4 +64,9 @@
   services.flatpak.packages = [
       "org.freedownloadmanager.Manager"
   ];
+
+  # Docker
+  virtualisation.docker = {
+    enable = true;
+  };
 }

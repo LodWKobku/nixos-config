@@ -64,7 +64,7 @@
     isNormalUser = true;
     initialPassword = "user";
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" "user-with-access-to-virtualbox" ];
+    extraGroups = [ "networkmanager" "wheel" "user-with-access-to-virtualbox" "docker" ];
     packages = with pkgs; [
       kdePackages.kate
     ];
