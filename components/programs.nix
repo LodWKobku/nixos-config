@@ -16,7 +16,10 @@
      wl-clipboard # Clipboard support for deskflow
      uget # Download manager
      libreoffice # Office software
-     go # go programming language
+     
+     #Dev
+     go
+     pnpm 
   ];
 
   # Firefox.
