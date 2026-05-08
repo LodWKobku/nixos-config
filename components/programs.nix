@@ -23,7 +23,7 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 5";
-    flake = "/home/user/Documents/nixos-nowe"; # sets NH_OS_FLAKE variable for you
+    flake = "/home/user/Documents/nixos-config"; # sets NH_OS_FLAKE variable for you
   };
 
   # Steam
