@@ -19,7 +19,8 @@
      
      #Dev
      go
-     pnpm 
+     pnpm
+     python313
   ];
 
   # Firefox.
