@@ -30,7 +30,10 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    VIRTUAL_ENV_DISABLE_PROMPT = "1";
+  };
 
   #Firewall
   networking.firewall = {
