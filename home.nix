@@ -32,6 +32,7 @@
 			];
 			userSettings = {
 				"workbench.iconTheme" = "catppuccin-frappe";
+				"chat.disableAIFeatures" = true;
 			};
 		};
 	};
