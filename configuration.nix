@@ -83,5 +83,5 @@
     virtualisation.memorySize = 8192;
   };
 
-  system.stateVersion = "26.05";
+  system.stateVersion = "25.11";
 }
