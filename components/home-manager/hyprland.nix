@@ -2,7 +2,8 @@
 {
     wayland.windowManager.hyprland = {
         enable = true;
-
+        configType = "hyprlang";
+        
         settings = {
             bind = [
                 "CONTROL, L, exec, pkill rofi || ${pkgs.rofi}/bin/rofi -show drun"
