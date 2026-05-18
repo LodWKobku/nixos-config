@@ -16,6 +16,7 @@
      wl-clipboard # Clipboard support for deskflow
      uget # Download manager
      libreoffice # Office software
+     bitwarden-desktop # Password manager
      
      #Dev
      go
