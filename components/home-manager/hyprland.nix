@@ -29,7 +29,7 @@
             owner = "adi1090x";
             repo = "rofi";
             rev = "master";
-            sha256 = "sha256-iUX0Quae06tGd7gDgXZo1B3KYgPHU+ADPBrowHlv02A=";
+            sha256 = "sha256-pM183MHOMuKJyLgthozM1MRsmhBM25VQgWc7CmLL2HI=";
         }}/files/launchers/type-3/style-1.rasi";
     };
 }
