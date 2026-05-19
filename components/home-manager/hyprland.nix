@@ -5,14 +5,21 @@
         configType = "hyprlang";
         
         settings = {
+            # Declare programs
+            "$terminal" = "${pkgs.kitty}/bin/kitty";
+            "$nm-applet" = "${pkgs.networkmanagerapplet}/bin/nm-applet";
+            "$rofi" = "${pkgs.rofi}/bin/rofi";
+            "$waybar" = "${pkgs.waybar}/bin/waybar";
+
+
             bind = [
-                "CONTROL, L, exec, pkill rofi || ${pkgs.rofi}/bin/rofi -show drun"
-                "CONTROL, T, exec, ${pkgs.kitty}/bin/kitty"
+                "CONTROL, L, exec, pkill rofi || $rofi -show drun"
+                "CONTROL, T, exec, $terminal"
             ];
 
             exec-once = [
-                "${pkgs.waybar}/bin/waybar"
-                "${pkgs.networkmanagerapplet}/bin/nm-applet"
+                "$waybar"
+                "$nm-applet"
             ];
         };
     };
