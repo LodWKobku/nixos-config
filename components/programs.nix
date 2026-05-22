@@ -21,7 +21,6 @@
      #Dev
      go
      pnpm
-     python313
   ];
 
   # Firefox.

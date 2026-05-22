@@ -35,6 +35,7 @@
 			userSettings = {
 				"workbench.iconTheme" = "catppuccin-frappe";
 				"chat.disableAIFeatures" = true;
+				"python.defaultInterpreterPath"= "${pkgs.python313}/bin/python";
 			};
 		};
 	};
