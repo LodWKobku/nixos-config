@@ -21,6 +21,7 @@
      #Dev
      go
      pnpm
+     devenv
   ];
 
   # Firefox.
@@ -32,7 +33,7 @@
     nativeMessagingHosts.packages = [ pkgs.uget-integrator ];
   };
 
-  # Devenv
+  # Direnv
   programs.direnv.enable = true;
   
   # Virtual Box
