@@ -33,6 +33,9 @@
     nativeMessagingHosts.packages = [ pkgs.uget-integrator ];
   };
 
+  # Devenv
+  programs.direnv.enable = true;
+  
   # Virtual Box
   virtualisation.virtualbox.host = {
     enable = true;
