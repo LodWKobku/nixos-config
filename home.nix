@@ -26,6 +26,7 @@
 			extensions = with pkgs.vscode-extensions; [
 				mhutchie.git-graph
 				ms-python.python
+				ms-python.debugpy
 				bbenoist.nix
 				catppuccin.catppuccin-vsc-icons
 				# Dev containters
