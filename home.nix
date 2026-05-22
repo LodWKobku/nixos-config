@@ -28,7 +28,9 @@
 				ms-python.python
 				bbenoist.nix
 				catppuccin.catppuccin-vsc-icons
-				ms-vscode-remote.remote-containers # dev containters
+				# Dev containters
+				ms-vscode-remote.remote-containers 
+				mkhl.direnv	
 			];
 			userSettings = {
 				"workbench.iconTheme" = "catppuccin-frappe";
