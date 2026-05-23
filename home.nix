@@ -68,6 +68,7 @@
 		kscreenlocker = {
 			autoLock = false;
 			lockOnResume = false;
+			timeout = 0;
 		};
 		powerdevil = {
 			AC.autoSuspend.action = "nothing";
