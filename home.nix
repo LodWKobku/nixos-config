@@ -64,6 +64,16 @@
 		};
 		kwin.effects.shakeCursor.enable = false; # Disable shake cursor disability feature
 		session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession"; # Disable automaticly restoring apps from last session
+		
+		kscreenlocker = {
+			autoLock = false;
+			lockOnResume = false;
+		};
+		powerdevil = {
+			AC.autoSuspend.action = "nothing";
+			battery.autoSuspend.action = "nothing";
+			
+		};
 
 		overrideConfig = true;
 		# resetFiles = ["plasma-org.kde.plasma.desktop-appletsrc"];
