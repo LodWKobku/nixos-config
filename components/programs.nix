@@ -17,6 +17,7 @@
      uget # Download manager
      libreoffice # Office software
      bitwarden-desktop # Password manager
+     teams-for-linux # Microsoft Teams
      
      #Dev
      go
