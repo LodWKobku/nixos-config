@@ -25,10 +25,12 @@
 		profiles.default = {
 			extensions = with pkgs.vscode-extensions; [
 				mhutchie.git-graph
-				ms-python.python
-				ms-python.debugpy
 				bbenoist.nix
 				catppuccin.catppuccin-vsc-icons
+				# Python
+				ms-python.python
+				ms-python.debugpy
+				ms-python.vscode-pylance
 				# Dev containters
 				ms-vscode-remote.remote-containers 
 				mkhl.direnv	
