@@ -19,4 +19,7 @@
       model = "canone3300.ppd";
     }
   ];
+
+  # Scanners
+  hardware.sane.enable = true;
 }
