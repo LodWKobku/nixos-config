@@ -53,7 +53,17 @@
 	#Fastfetch
 	programs.fastfetch.enable = true;
 	
+	#nix-init
+	programs.nix-init = {
+		enable = true;
+		settings = {
+			maintainers = [
+				"LodWKobku"
+  			];
 
+		};
+	};
+	
 	#Plasma
 	programs.plasma = {
 		enable = true;
