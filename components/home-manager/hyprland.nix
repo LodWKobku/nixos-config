@@ -36,8 +36,8 @@
         theme = "${pkgs.fetchFromGitHub {
             owner = "adi1090x";
             repo = "rofi";
-            rev = "master";
-            sha256 = "sha256-pM183MHOMuKJyLgthozM1MRsmhBM25VQgWc7CmLL2HI=";
+            rev = "512a585fff6da5b2a90e5948059b062516ddb2e7";
+            sha256 = "sha256-iUX0Quae06tGd7gDgXZo1B3KYgPHU+ADPBrowHlv02A=";
         }}/files/launchers/type-3/style-1.rasi";
     };
 }
