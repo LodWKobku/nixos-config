@@ -1,0 +1,28 @@
+{ self, inputs, ...}: {
+  flake.nixosModules.laptopHardware = { config, lib, pkgs, modulesPath, ... }: {
+    imports =
+    [ (modulesPath + "/installer/scan/not-detected.nix")
+    ];
+
+    boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "rtsx_pci_sdmmc" ];
+    boot.initrd.kernelModules = [ ];
+    boot.kernelModules = [ "kvm-intel" ];
+    boot.extraModulePackages = [ ];
+
+    fileSystems."/" =
+      { device = "/dev/disk/by-uuid/6e94f58e-85ad-4c69-886d-12c5f027ec8f";
+        fsType = "ext4";
+      };
+
+    fileSystems."/boot" =
+      { device = "/dev/disk/by-uuid/F491-DF2D";
+        fsType = "vfat";
+        options = [ "fmask=0077" "dmask=0077" ];
+      };
+
+    swapDevices = [ ];
+
+    nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+    hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  };
+}
