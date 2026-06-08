@@ -2,9 +2,10 @@
 
   flake.nixosModules.laptopConfig = { pkgs, lib, ... }: {
     imports = [
-      self.nixosModules.laptopHardware
-      self.nixosModules.niri
       inputs.home-manager.nixosModules.home-manager
+      self.nixosModules.laptopHardware
+      
+      self.nixosModules.plasma
     ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -19,6 +20,7 @@
     home-manager = {
       useGlobalPkgs = true;
       useUserPackages = true;
+      sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
       users.user = self.homeModules.user;
     };
 

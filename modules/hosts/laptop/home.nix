@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
     flake.homeModules.user = { pkgs, ... }: {
         imports = [
-            #TODO
+            self.homeModules.plasma-manager
         ];
         
         #Fastfetch
