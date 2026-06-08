@@ -1,8 +1,12 @@
 { self, inputs, ... }: {
-    # Remember to import both `plasma` in nixos and `plasma-manager` in home-manager
-    flake.nixosModules.plasma = { pkgs, lib, ... }: {
+    flake.nixosModules.plasma = { pkgs, lib, config, ... }: {
         services.displayManager.sddm.enable = true;
         services.desktopManager.plasma6.enable = true;
+        
+        home-manager.sharedModules = [
+            inputs.plasma-manager.homeModules.plasma-manager
+            self.homeModules.plasma-manager
+        ];
     };
 
     flake.homeModules.plasma-manager = { pkgs, ... }: {
