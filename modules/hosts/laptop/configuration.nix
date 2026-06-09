@@ -8,6 +8,7 @@
       self.nixosModules.keyboard
       
       self.nixosModules.plasma
+      self.nixosModules.stylix
       self.nixosModules.browser
     ];
 
