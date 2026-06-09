@@ -10,6 +10,7 @@
       self.nixosModules.plasma
       self.nixosModules.stylix
       self.nixosModules.browser
+      self.nixosModules.music
     ];
 
     home-manager = {
