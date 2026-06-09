@@ -7,6 +7,7 @@
       self.nixosModules.basics
       
       self.nixosModules.plasma
+      self.nixosModules.browser
     ];
 
     home-manager = {
