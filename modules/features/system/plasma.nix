@@ -33,7 +33,7 @@
                 
             };
 
-            overrideConfig = true;
+            # overrideConfig = true;
             # resetFiles = ["plasma-org.kde.plasma.desktop-appletsrc"];
             desktop = { #Customize desktop
                 widgets = [
@@ -56,21 +56,21 @@
                 ];
             };
             
-            panels = [ # Customize panel
-                {
-                    location = "bottom";
-                    lengthMode = "fill";
-                    widgets = [
-                        "org.kde.plasma.kickoff"
-                        "org.kde.plasma.pager"
-                        "org.kde.plasma.icontasks"
-                        "org.kde.plasma.marginsseparator"
-                        "org.kde.plasma.systemtray"
-                        "org.kde.plasma.digitalclock"
-                        "org.kde.plasma.showdesktop"
-                    ];
-                }
-            ];
+            # panels = [ # Customize panel
+            #     {
+            #         location = "bottom";
+            #         lengthMode = "fill";
+            #         widgets = [
+            #             "org.kde.plasma.kickoff"
+            #             "org.kde.plasma.pager"
+            #             "org.kde.plasma.icontasks"
+            #             "org.kde.plasma.marginsseparator"
+            #             "org.kde.plasma.systemtray"
+            #             "org.kde.plasma.digitalclock"
+            #             "org.kde.plasma.showdesktop"
+            #         ];
+            #     }
+            # ];
         };
     };
 }
