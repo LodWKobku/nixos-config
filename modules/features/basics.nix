@@ -30,5 +30,10 @@
             alsa.support32Bit = true;
             pulse.enable = true;
         };
+
+        # Virtual machine settings
+        virtualisation.vmVariant = {
+            virtualisation.memorySize = 4096;
+        };
     };
 }
