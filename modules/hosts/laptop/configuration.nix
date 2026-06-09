@@ -7,6 +7,7 @@
       self.nixosModules.basics
       self.nixosModules.keyboard
       
+      self.nixosModules.shell
       self.nixosModules.plasma
       self.nixosModules.stylix
       self.nixosModules.browser
