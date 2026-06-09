@@ -19,5 +19,16 @@
         networking.networkmanager.enable = true; # Networking
         time.timeZone = "Europe/Warsaw"; # Timezone
         nixpkgs.config.allowUnfree = true;  # Unfree packages
+
+        # Sound
+        hardware.bluetooth.enable = true;
+        services.pulseaudio.enable = false;
+        security.rtkit.enable = true;
+        services.pipewire = {
+            enable = true;
+            alsa.enable = true;
+            alsa.support32Bit = true;
+            pulse.enable = true;
+        };
     };
 }
