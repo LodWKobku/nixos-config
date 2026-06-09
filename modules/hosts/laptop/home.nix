@@ -1,6 +1,7 @@
 { self, inputs, ... }: {
     flake.homeModules.user = { pkgs, ... }: {
         imports = [
+            self.homeModules.git
             self.homeModules.vscode
         ];
         
