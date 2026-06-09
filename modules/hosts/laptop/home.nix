@@ -1,5 +1,9 @@
 { self, inputs, ... }: {
     flake.homeModules.user = { pkgs, ... }: {
+        imports = [
+            self.homeModules.vscode
+        ];
+        
         #Fastfetch
         programs.fastfetch.enable = true;
 
