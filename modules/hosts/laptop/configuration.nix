@@ -5,6 +5,7 @@
       inputs.home-manager.nixosModules.home-manager
       self.nixosModules.laptopHardware
       self.nixosModules.basics
+      self.nixosModules.keyboard
       
       self.nixosModules.plasma
       self.nixosModules.browser
