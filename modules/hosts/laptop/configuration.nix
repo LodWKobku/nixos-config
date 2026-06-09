@@ -14,6 +14,7 @@
     home-manager = {
       useGlobalPkgs = true;
       useUserPackages = true;
+      backupFileExtension = "backup";
       users.user = self.homeModules.user;
     };
 
