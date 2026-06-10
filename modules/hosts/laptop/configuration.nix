@@ -7,6 +7,7 @@
           self.nixosModules.laptopHardware
           self.nixosModules.basics
           self.nixosModules.keyboard
+          self.nixosModules.printer
           
           self.nixosModules.shell
           self.nixosModules.plasma
