@@ -14,6 +14,7 @@
           self.nixosModules.stylix
           self.nixosModules.browser
           self.nixosModules.music
+          self.nixosModules.virtualbox
         ];
 
         home-manager = {
