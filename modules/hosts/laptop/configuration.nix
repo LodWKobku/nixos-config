@@ -12,9 +12,10 @@
           self.nixosModules.shell
           self.nixosModules.plasma
           self.nixosModules.stylix
+          self.nixosModules.virtualbox
           self.nixosModules.browser
           self.nixosModules.music
-          self.nixosModules.virtualbox
+          self.nixosModules.games
         ];
 
         home-manager = {
