@@ -50,5 +50,16 @@
 		],
 		"include": ["**/modules/**"],
 		"description": "A module that export options to home-manager"
-	}
+	},
+	"packages": {
+		"scope": "nix",
+		"prefix": "packages",
+		"body": [
+			"environment.systemPackages = with pkgs; [",
+				"\t$0",
+			"];"
+		],
+		"include": ["**/modules/**"],
+		"description": "Adding packages to envirement.systemPackages"
+	},
 }
