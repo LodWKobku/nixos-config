@@ -2,6 +2,7 @@
     flake.homeModules.user = { pkgs, ... }: {
         imports = [
             self.homeModules.vscode
+            self.homeModules.discord
         ];
         
         #Fastfetch
