@@ -16,6 +16,7 @@
           self.nixosModules.browser
           self.nixosModules.music
           self.nixosModules.games
+          self.nixosModules.discord
         ];
 
         home-manager = {
