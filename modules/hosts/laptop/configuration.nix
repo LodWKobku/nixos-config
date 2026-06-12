@@ -13,6 +13,8 @@
           self.nixosModules.plasma
           self.nixosModules.stylix
           self.nixosModules.virtualbox
+          self.nixosModules.docker
+          
           self.nixosModules.browser
           self.nixosModules.music
           self.nixosModules.games
