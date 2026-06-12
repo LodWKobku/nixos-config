@@ -7,6 +7,7 @@
                     mhutchie.git-graph
                     bbenoist.nix
                     catppuccin.catppuccin-vsc-icons
+                    leonardssh.vscord
                     # Python
                     ms-python.python
                     ms-python.debugpy
@@ -19,6 +20,8 @@
                     "workbench.iconTheme" = "catppuccin-frappe";
                     "chat.disableAIFeatures" = true;
                     "python.defaultInterpreterPath"= "${pkgs.python313}/bin/python";
+                    # Discord Rich Presence
+                    "vscord.status.problems.enabled"= false;
                 };
             };
 	    };
