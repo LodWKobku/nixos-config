@@ -35,5 +35,10 @@
         virtualisation.vmVariant = {
             virtualisation.memorySize = 4096;
         };
+
+        fonts.packages = with pkgs; [
+            nerd-fonts.jetbrains-mono
+            noto-fonts-cjk-sans
+        ];
     };
 }
