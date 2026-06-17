@@ -12,6 +12,12 @@
         environment.systemPackages = with pkgs; [
             self.packages.${pkgs.stdenv.hostPlatform.system}.kitty
         ];
+        xdg.terminal-exec = {
+            enable = true;
+            settings = {
+                default = [ "kitty.desktop" ];
+            };
+        };
         programs.starship = {
             enable = true;
             package = self.packages.${pkgs.stdenv.hostPlatform.system}.starship;
