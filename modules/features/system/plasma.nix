@@ -7,6 +7,12 @@
             inputs.plasma-manager.homeModules.plasma-manager
             self.homeModules.plasma-manager
         ];
+        
+        # Disable default kde terminal
+        environment.plasma6.excludePackages = with pkgs; [
+            kdePackages.konsole
+        ];
+
     };
 
     flake.homeModules.plasma-manager = { pkgs, ... }: {
