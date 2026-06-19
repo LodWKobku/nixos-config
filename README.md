@@ -1,2 +1,2 @@
-# WIP
-Test branch to switch configuration to flake-parts
+# Nixos configuration
+This is my personal nixos configuration
