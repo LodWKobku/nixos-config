@@ -1,5 +1,5 @@
 # Nixos configuration
-This is repo for my personal nixos configuration for daily usage. For now it isn't anything crazy but feel free to copy.
+This is my old config, without flake-parts.
  
 ## Programs
 | <!-- -->    | <!-- -->    |
