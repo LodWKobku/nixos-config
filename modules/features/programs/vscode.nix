@@ -20,6 +20,7 @@
                     "workbench.iconTheme" = "catppuccin-frappe";
                     "chat.disableAIFeatures" = true;
                     "python.defaultInterpreterPath"= "${pkgs.python313}/bin/python";
+                    "terminal.integrated.fontFamily"= "JetBrainsMono NFM";
                     # Discord Rich Presence
                     "vscord.status.problems.enabled"= false;
                 };

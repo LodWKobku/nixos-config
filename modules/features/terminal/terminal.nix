@@ -28,6 +28,7 @@
         packages.kitty = inputs.wrapper-modules.wrappers.kitty.wrap {
             inherit pkgs;
             # Configuration from https://github.com/stefan-hacks/ikitty/
+            font.name = "JetBrainsMono NFM";
             settings = {
                 repaint_delay = 10;
                 input_delay = 3;
