@@ -4,6 +4,7 @@
             python313Packages.huggingface-hub
             python313Packages.modelscope
             gemini-cli
+            antigravity-cli
         ];
     };
 }
