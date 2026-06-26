@@ -2,7 +2,6 @@
     flake.nixosModules.shell = { pkgs, lib, ... }: {
         imports = [
             self.nixosModules.aiCli
-            self.nixosModules.devenv
             self.nixosModules.git
         ];
         home-manager.sharedModules = [
@@ -11,6 +10,7 @@
         
         environment.systemPackages = with pkgs; [
             self.packages.${pkgs.stdenv.hostPlatform.system}.kitty
+            pkgs.devenv
         ];
         xdg.terminal-exec = {
             enable = true;
@@ -79,12 +79,16 @@
         };
         packages.fish = inputs.wrapper-modules.wrappers.fish.wrap {
             inherit pkgs;
+            runtimePkgs = [ 
+                pkgs.devenv
+            ];
             plugins = [
                 pkgs.fishPlugins.done
             ];
             configFile.content = ''
-                ${lib.getExe self'.packages.starship} init fish | source
                 fish_config theme choose catppuccin-frappe
+                ${lib.getExe self'.packages.starship} init fish | source
+                ${lib.getExe pkgs.devenv} hook fish | source
             '';
         };
     };
