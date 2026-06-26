@@ -2,6 +2,7 @@
     flake.nixosModules.shell = { pkgs, lib, ... }: {
         imports = [
             self.nixosModules.aiCli
+            self.nixosModules.git
         ];
         home-manager.sharedModules = [
             self.homeModules.nix-init
@@ -79,8 +80,6 @@
         packages.fish = inputs.wrapper-modules.wrappers.fish.wrap {
             inherit pkgs;
             runtimePkgs = [ 
-                self'.packages.git
-                pkgs.gh
                 pkgs.devenv
             ];
             plugins = [
