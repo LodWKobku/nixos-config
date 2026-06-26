@@ -48,6 +48,23 @@
                 # TODO
             };
             themeFile = "Catppuccin-Frappe";
+
+            constructFiles.kittyDesktop = {
+                content = (pkgs.makeDesktopItem {
+                        type = "Application";
+                        name = "kitty";
+                        desktopName = "kitty";
+                        genericName = "Terminal emulator";
+                        comment = "Fast, feature-rich, GPU based terminal";
+                        tryExec = "kitty";
+                        startupNotify = true;
+                        exec = "kitty";
+                        icon = "kitty";
+                        categories = [ "System" "TerminalEmulator" ];
+                        keywords = [ "cmd" ];
+                    }).text;
+                relPath = "share/applications/kitty.desktop";
+            };
         };
         packages.starship = inputs.wrapper-modules.wrappers.starship.wrap {
             inherit pkgs;
