@@ -18,8 +18,10 @@
 
         input.keyboard.xkb.layout = "us,ua";
 
+        window-rules = [{
+            open-floating = true;
+        }];
         layout.gaps = 5;
-
         binds = {
           "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Q".close-window = { };
