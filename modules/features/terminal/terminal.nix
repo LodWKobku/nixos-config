@@ -18,6 +18,9 @@
                 default = [ "kitty.desktop" ];
             };
         };
+        #Fastfetch
+        programs.fastfetch.enable = true;
+        
         programs.starship = {
             enable = true;
             package = self.packages.${pkgs.stdenv.hostPlatform.system}.starship;

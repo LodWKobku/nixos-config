@@ -4,9 +4,6 @@
             self.homeModules.vscode
             self.homeModules.discord
         ];
-        
-        #Fastfetch
-        programs.fastfetch.enable = true;
 
         home.username = "user";
         home.homeDirectory = "/home/user";
