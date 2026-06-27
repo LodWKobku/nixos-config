@@ -5,6 +5,7 @@
                 inputs.home-manager.nixosModules.home-manager
                 self.nixosModules.propcHardware
                 self.nixosModules.basics
+                self.nixosModules.nvidia
                 self.nixosModules.keyboard
                 self.nixosModules.printer
 
