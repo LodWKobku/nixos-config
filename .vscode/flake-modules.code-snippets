@@ -36,6 +36,7 @@
 			"}"
 		],
 		"include": ["**/modules/**"],
+		"exclude": ["**/modules/hosts/**"],
 		"description": "A module that export options to nixos"
 	},
 	"homeModules":{
@@ -49,6 +50,7 @@
 			"}"
 		],
 		"include": ["**/modules/**"],
+		"exclude": ["**/modules/hosts/**"],
 		"description": "A module that export options to home-manager"
 	},
 	"packages": {
