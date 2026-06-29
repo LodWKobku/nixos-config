@@ -10,7 +10,6 @@
         
         environment.systemPackages = with pkgs; [
             self.packages.${pkgs.stdenv.hostPlatform.system}.kitty
-            pkgs.devenv
         ];
         xdg.terminal-exec = {
             enable = true;
