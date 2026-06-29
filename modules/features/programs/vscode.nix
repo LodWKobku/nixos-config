@@ -20,6 +20,7 @@
                     "workbench.iconTheme" = "catppuccin-frappe";
                     "chat.disableAIFeatures" = true;
                     "python.defaultInterpreterPath"= "${pkgs.python313}/bin/python";
+                    "editor.fontFamily"= lib.mkForce "DejaVu Sans Mono, JetBrainsMono NFM, monospace";
                     "terminal.integrated.fontFamily"= "JetBrainsMono NFM";
                     "git.autofetch"= true;
                     # Discord Rich Presence
