@@ -62,4 +62,20 @@
 		"include": ["**/modules/**"],
 		"description": "Adding packages to envirement.systemPackages"
 	},
+	"wrapper-modules": {
+		"scope": "nix",
+		"prefix": "wrapper-modules",
+		"body": [
+			"{ self, inputs, ... }: {",
+				"\tperSystem = { pkgs, lib, self', ... }: {",
+					"\t\tpackages.${1} = inputs.wrapper-modules.wrappers.${1}.wrap {",
+						"\t\t\tinherit pkgs;",
+						"\t\t\t${0}",
+					"\t\t};",
+				"\t};",
+			"}"
+		],
+		"include": ["**/modules/**"],
+		"description": "Creating a custom package using nix-wrapper-modules",
+	},
 }

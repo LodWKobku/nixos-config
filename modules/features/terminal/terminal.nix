@@ -18,11 +18,6 @@
                 default = [ "kitty.desktop" ];
             };
         };
-        
-        programs.starship = {
-            enable = true;
-            package = self.packages.${pkgs.stdenv.hostPlatform.system}.starship;
-        };
         users.users.user.shell = self.packages.${pkgs.stdenv.hostPlatform.system}.fish;
         programs.fish = {
             enable = true;
@@ -73,16 +68,13 @@
                 relPath = "share/applications/kitty.desktop";
             };
         };
-        packages.starship = inputs.wrapper-modules.wrappers.starship.wrap {
-            inherit pkgs;
-            preset = "catppuccin-powerline";
-            settings.palette = "catppuccin_frappe";
-        };
         packages.fish = inputs.wrapper-modules.wrappers.fish.wrap {
             inherit pkgs;
             runtimePkgs = [ 
-                pkgs.devenv
                 self'.packages.fastfetch
+                self'.packages.starship
+
+                pkgs.devenv
             ];
             plugins = [
                 pkgs.fishPlugins.done
