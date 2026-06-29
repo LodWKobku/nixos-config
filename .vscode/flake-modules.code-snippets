@@ -77,7 +77,7 @@
 				"\t};",
 			"}"
 		],
-		"include": ["**/modules/**"],
+		"include": ["**/wrappedPrograms/**"],
 		"description": "Creating a custom package using nix-wrapper-modules",
 	},
 }
