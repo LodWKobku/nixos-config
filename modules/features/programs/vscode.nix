@@ -21,6 +21,7 @@
                     "chat.disableAIFeatures" = true;
                     "python.defaultInterpreterPath"= "${pkgs.python313}/bin/python";
                     "terminal.integrated.fontFamily"= "JetBrainsMono NFM";
+                    "git.autofetch"= true;
                     # Discord Rich Presence
                     "vscord.status.problems.enabled"= false;
                 };
