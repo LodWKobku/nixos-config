@@ -2,7 +2,6 @@
     flake.nixosModules.shell = { pkgs, lib, ... }: {
         imports = [
             self.nixosModules.aiCli
-            self.nixosModules.git
         ];
         home-manager.sharedModules = [
             self.homeModules.nix-init
@@ -11,6 +10,11 @@
         environment.systemPackages = with pkgs; [
             self.packages.${pkgs.stdenv.hostPlatform.system}.kitty
         ];
+        programs.git = {
+            enable = true;
+            package = self.packages.${pkgs.stdenv.hostPlatform.system}.git;
+        };
+        
         xdg.terminal-exec = {
             enable = true;
             settings = {
@@ -22,6 +26,8 @@
             enable = true;
             package = self.packages.${pkgs.stdenv.hostPlatform.system}.fish;
         };
+
+        
 
     };
 
