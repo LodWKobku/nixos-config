@@ -18,8 +18,6 @@
                 default = [ "kitty.desktop" ];
             };
         };
-        #Fastfetch
-        programs.fastfetch.enable = true;
         
         programs.starship = {
             enable = true;
@@ -84,6 +82,7 @@
             inherit pkgs;
             runtimePkgs = [ 
                 pkgs.devenv
+                self'.packages.fastfetch
             ];
             plugins = [
                 pkgs.fishPlugins.done
