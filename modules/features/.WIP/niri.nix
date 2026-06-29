@@ -19,8 +19,11 @@
         input.keyboard.xkb.layout = "us,ua";
 
         window-rules = [{
-            open-floating = true;
+          open-floating = true;
+          geometry-corner-radius = 12;
+          clip-to-geometry = true;
         }];
+
         layout.gaps = 5;
         binds = {
           "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
