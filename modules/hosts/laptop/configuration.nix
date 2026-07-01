@@ -10,8 +10,7 @@
           self.nixosModules.printer
           
           self.nixosModules.shell
-          self.nixosModules.plasma
-          self.nixosModules.stylix
+          self.nixosModules.hyprland
           self.nixosModules.virtualbox
           self.nixosModules.docker
           
