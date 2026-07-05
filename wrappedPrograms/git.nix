@@ -5,9 +5,17 @@
             paths = [
                 (inputs.wrapper-modules.wrappers.git.wrap {
                     inherit pkgs;
-                    settings.user = {
-                        name  = "LodWKobku";
-                        email = "lodwkobku@gmail.com";
+                    settings = {
+                        "credential \"https://github.com\"" = {
+                            "helper" = "!${lib.getExe pkgs.gh} auth git-credential";
+                        };
+                        "credential \"https://gist.github.com\"" = {
+                            "helper" = "!${lib.getExe pkgs.gh} auth git-credential";
+                        };
+                        user = {
+                            name  = "LodWKobku";
+                            email = "lodwkobku@gmail.com";
+                        };
                     };
                 })
                 pkgs.gh
