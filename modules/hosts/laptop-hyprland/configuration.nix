@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.laptop-hyprland = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       {
         imports = [
@@ -10,8 +10,7 @@
           self.nixosModules.printer
           
           self.nixosModules.shell
-          self.nixosModules.plasma
-          self.nixosModules.stylix
+          self.nixosModules.hyprland
           self.nixosModules.virtualbox
           self.nixosModules.docker
           
@@ -34,7 +33,7 @@
           enable = true;
           clean.enable = true;
           clean.extraArgs = "--keep-since 4d --keep 5";
-          flake = "/home/user/Documents/nixos-config#laptop";
+          flake = "/home/user/Documents/nixos-config#laptop-hyprland";
         };
 
         system.stateVersion = "25.11";
