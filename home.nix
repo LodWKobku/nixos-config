@@ -34,11 +34,11 @@
 	};
 
 	#Discord
-	programs.discord = {
-		enable = true;
-		package = pkgs.discord;
-		settings.SKIP_HOST_UPDATE = true;
-	};
+	# programs.discord = {
+	# 	enable = true;
+	# 	package = pkgs.discord;
+	# 	settings.SKIP_HOST_UPDATE = true;
+	# };
 
 	#Fastfetch
 	programs.fastfetch.enable = true;
@@ -47,6 +47,6 @@
 	home.file."Desktop/Steam.desktop".source = "${pkgs.steam}/share/applications/steam.desktop";
 	home.file."Desktop/Heroic Game Launcher.desktop".source = "${pkgs.heroic}/share/applications/com.heroicgameslauncher.hgl.desktop";
 	home.file."Desktop/PrismLauncher.desktop".source = "${pkgs.prismlauncher}/share/applications/org.prismlauncher.PrismLauncher.desktop";
-	home.file."Desktop/Discord.desktop".source = "${pkgs.discord}/share/applications/discord.desktop";
+	# home.file."Desktop/Discord.desktop".source = "${pkgs.discord}/share/applications/discord.desktop";
 }
 
