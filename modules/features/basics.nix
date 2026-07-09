@@ -19,6 +19,7 @@
         networking.networkmanager.enable = true; # Networking
         time.timeZone = "Europe/Warsaw"; # Timezone
         nixpkgs.config.allowUnfree = true;  # Unfree packages
+        boot.tmp.cleanOnBoot = true; # Automaticly cleaning /tmp
 
         # Sound
         hardware.bluetooth.enable = true;
