@@ -1,23 +1,13 @@
 { self, inputs, ... }: {
-    flake.nixosModules.hyprland = { pkgs, lib, config, ... }: {
-        nix.settings = {
-            substituters = [
-                "https://hyprland.cachix.org"
-            ];
-            trusted-substituters = [
-                "https://hyprland.cachix.org"
-            ];
-            trusted-public-keys = [
-                "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-            ];
-        };
-        
+    flake.nixosModules.hyprland = { pkgs, lib, config, ... }: {        
         services.xserver.enable = true;
 
         programs.hyprland = {
             enable = true;
             withUWSM = true;
             xwayland.enable = true;
+            package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+            portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
         };
 
         home-manager.sharedModules = [
@@ -33,16 +23,23 @@
             enable = true;
             configType = "hyprlang";
             xwayland.enable = true;
-            systemd.enable = true;
+            package = null;
+            portalPackage = null;
+            
+            # Resources:
+                # https://github.com/hyprwm/Hyprland/blob/v0.54.3-b/example/hyprland.conf
+                # https://wiki.hypr.land/0.54.0/Configuring/
+                
             settings = {
                 # Declare programs
-                "$terminal" = "${pkgs.kitty}/bin/kitty";
-                "$nm-applet" = "${pkgs.networkmanagerapplet}/bin/nm-applet";
-                "$rofi" = "${pkgs.rofi}/bin/rofi";
-                "$waybar" = "${pkgs.waybar}/bin/waybar";
+                "$terminal" = "${lib.getExe self.packages.${pkgs.stdenv.hostPlatform.system}.kitty}";
+                "$nm-applet" = "${lib.getExe pkgs.networkmanagerapplet}";
+                "$rofi" = "${lib.getExe pkgs.rofi}";
+                "$waybar" = "${lib.getExe pkgs.waybar}";
 
 
                 bind = [
+                    "CONTROL, Q, exec, killactive"
                     "CONTROL, L, exec, pkill rofi || $rofi -show drun"
                     "CONTROL, T, exec, $terminal"
                 ];
