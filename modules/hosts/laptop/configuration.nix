@@ -37,7 +37,7 @@
           flake = "/home/user/Documents/nixos-config#laptop";
         };
 
-        system.stateVersion = "25.11";
+        system.stateVersion = "26.05";
       }
     ];
   };
