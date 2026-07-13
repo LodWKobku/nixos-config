@@ -59,13 +59,13 @@
                 ];
 
                 exec-once = [
-                    "$waybar"
-                    "$nm-applet"
                     "$awww-daemon"
                     "$awww img ${pkgs.fetchurl {
                         url = "https://github.com/NixOS/nixos-artwork/blob/master/wallpapers/nix-wallpaper-nineish-catppuccin-frappe.png?raw=true";
                         hash = "sha256-/HAtpGwLxjNfJvX5/4YZfM8jPNStaM3gisK8+ImRmQ4=";
-                    }}"
+                    }} -t none"
+                    "$waybar"
+                    "$nm-applet"
                 ];
             };
         };
