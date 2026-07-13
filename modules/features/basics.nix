@@ -7,7 +7,7 @@
             isNormalUser = true;
             initialPassword = "user";
             description = "user";
-            extraGroups = [ "networkmanager" "wheel"];
+            extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
         };
 
         # Bootloader
@@ -33,8 +33,12 @@
         };
 
         # Virtual machine settings
-        virtualisation.vmVariant = {
-            virtualisation.memorySize = 4096;
+        virtualisation = {
+            libvirtd.enable = true;
+            vmVariant = {
+                virtualisation.memorySize = 5102;
+                virtualisation.cores = 6;
+            };
         };
 
         fonts.packages = with pkgs; [
