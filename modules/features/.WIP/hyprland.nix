@@ -42,7 +42,9 @@
             # Resources:
                 # https://github.com/hyprwm/Hyprland/blob/v0.54.3-b/example/hyprland.conf
                 # https://wiki.hypr.land/0.54.0/Configuring/
-                
+            plugins = [
+                pkgs.hyprlandPlugins.hyprbars
+            ];
             settings = {
                 # Declare programs
                 "$terminal" = "${lib.getExe self.packages.${pkgs.stdenv.hostPlatform.system}.kitty}";
@@ -67,6 +69,18 @@
                     "$waybar"
                     "$nm-applet"
                 ];
+                
+                windowrule = [
+                    "match:class .*, float on"  # Floating windows
+                ];
+
+                plugin.hyprbars = {
+                    bar_height = 25;
+                    hyprbars-button = [
+                        "rgb(ff4040), 20, 󰖭, hyprctl dispatch killactive"
+                        "rgb(eeee11), 20, , hyprctl dispatch fullscreen 1"
+                    ];
+                };
             };
         };
 
