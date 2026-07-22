@@ -11,9 +11,11 @@
                 "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
             ];
         };
+        imports = [
+            inputs.hyprfloat.nixosModules.default
+        ];
 
         services.xserver.enable = true;
-
         programs.hyprland = {
             enable = true;
             withUWSM = true;
@@ -25,6 +27,8 @@
         home-manager.sharedModules = [
             self.homeModules.hyprlandHome
         ];
+
+        programs.hyprfloat.enable = true;
     };
 
     flake.homeModules.hyprlandHome = { pkgs, lib, config, ... }: {
