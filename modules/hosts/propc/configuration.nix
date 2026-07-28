@@ -35,7 +35,20 @@
                 clean.extraArgs = "--keep-since 4d --keep 5";
                 flake = "/home/user/Documents/nixos-config#propc";
             };
+            
+            home-manager.sharedModules = [{
+                # Desktop Files
+                home.file."Desktop/Steam.desktop".source = "${pkgs.steam}/share/applications/steam.desktop";
+                home.file."Desktop/Lutris.desktop".source = "${pkgs.lutris-unwrapped}/share/applications/net.lutris.Lutris.desktop";
+                home.file."Desktop/PrismLauncher.desktop".source = "${pkgs.prismlauncher}/share/applications/org.prismlauncher.PrismLauncher.desktop";
+                home.file."Desktop/Discord.desktop".source = "${pkgs.discord}/share/applications/discord.desktop";
+                # home.file."Desktop/Lutris.desktop".source = "${pkgs.lutris-unwrapped}/share/applications/net.lutris.Lutris.desktop";
+                home.file."Desktop/Blender.desktop".source = "${pkgs.blender}/share/applications/blender.desktop";
 
+                # Disable KWallet
+                security.pam.services.sddm.kwallet.enable = false;
+                programs.plasma.configFile."kwalletrc"."Wallet"."Enabled" = false;
+            }];
             system.stateVersion = "25.11";
         }];
     };
