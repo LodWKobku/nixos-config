@@ -36,6 +36,9 @@
                 flake = "/home/user/Documents/nixos-config#propc";
             };
             
+            # Disable KWallet (1)
+            security.pam.services.sddm.kwallet.enable = false;
+
             home-manager.sharedModules = [{
                 # Desktop Files
                 home.file."Desktop/Steam.desktop".source = "${pkgs.steam}/share/applications/steam.desktop";
@@ -43,8 +46,7 @@
                 home.file."Desktop/PrismLauncher.desktop".source = "${pkgs.prismlauncher}/share/applications/org.prismlauncher.PrismLauncher.desktop";
                 home.file."Desktop/Blender.desktop".source = "${pkgs.blender}/share/applications/blender.desktop";
 
-                # Disable KWallet
-                security.pam.services.sddm.kwallet.enable = false;
+                # Disable KWallet (2)
                 programs.plasma.configFile."kwalletrc"."Wallet"."Enabled" = false;
 
                 # Force older home stateVersion
