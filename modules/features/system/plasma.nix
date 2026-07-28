@@ -18,11 +18,19 @@
     flake.homeModules.plasma-manager = { pkgs, ... }: {
         programs.plasma = {
             enable = true;
-            configFile."kwinrc".Wayland = {
+
+            configFile = {
+                # Set kitty a default terminal
+                "kdeglobals".General = {
+                    TerminalClient = true;
+                    TerminalService = "kitty.desktop";
+                };
                 # Autoenable fcitx5 digital keyboard (for chinese characters)
-                "InputMethod" = {
-                    shellExpand = true;
-                    value = "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
+                "kwinrc".Wayland = {
+                    "InputMethod" = {
+                        shellExpand = true;
+                        value = "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
+                    };
                 };
             };
             kwin.effects.shakeCursor.enable = false; # Disable shake cursor disability feature
