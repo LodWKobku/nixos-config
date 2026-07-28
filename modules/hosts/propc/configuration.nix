@@ -1,4 +1,4 @@
-{ self, inputs, pkgs, ... }: {
+{ self, inputs, pkgs, lib, ... }: {
     flake.nixosConfigurations.propc = inputs.nixpkgs.lib.nixosSystem {
         modules = [{
             imports = [
@@ -46,6 +46,9 @@
                 # Disable KWallet
                 security.pam.services.sddm.kwallet.enable = false;
                 programs.plasma.configFile."kwalletrc"."Wallet"."Enabled" = false;
+
+                # Force older home stateVersion
+                home.stateVersion = lib.mkForce "25.11";
             }];
             system.stateVersion = "25.11";
         }];
