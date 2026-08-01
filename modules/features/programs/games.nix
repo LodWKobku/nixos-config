@@ -15,6 +15,11 @@
             };
         }];
 
+        # Others
+        environment.systemPackages = with pkgs; [
+            prismlauncher   # Minecraft
+        ];
+
         # Gamemode
         programs.gamemode.enable = true;
         users.users.user.extraGroups = [ "gamemode" ];
