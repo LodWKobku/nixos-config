@@ -4,5 +4,11 @@
             libreoffice
             teams-for-linux
         ];
+
+        # OBS
+        programs.obs-studio = {
+            enable = true;
+            enableVirtualCamera = true;
+        };
     };
 }
