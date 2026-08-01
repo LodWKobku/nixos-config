@@ -15,7 +15,7 @@
                 self.nixosModules.virtualbox
                 
                 self.nixosModules.browser
-                self.nixosModules.music
+                self.nixosModules.utils
                 self.nixosModules.games
                 self.nixosModules.work
             ];
