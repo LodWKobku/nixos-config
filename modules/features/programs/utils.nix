@@ -2,7 +2,7 @@
     flake.nixosModules.utils = { pkgs, lib, config, ... }: {
         environment.systemPackages = with pkgs; [
             gparted
-            qdirstat
+            self.packages.${pkgs.stdenv.hostPlatform.system}.qdirstat
 
             pear-desktop
         ];
