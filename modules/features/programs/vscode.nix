@@ -18,6 +18,7 @@
                 ];
                 userSettings = {
                     "workbench.iconTheme" = "catppuccin-frappe";
+                    "workbench.experimental.modernUI" = false;
                     "chat.disableAIFeatures" = true;
                     "python.defaultInterpreterPath"= "${pkgs.python313}/bin/python";
                     "editor.fontFamily"= lib.mkForce "DejaVu Sans Mono, JetBrainsMono NFM, monospace";
