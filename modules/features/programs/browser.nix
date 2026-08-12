@@ -2,6 +2,7 @@
     flake.nixosModules.browser = { pkgs, lib, ... }: {
         programs.firefox = {
             enable = true;
+            languagePacks = [ "en-US" "pl" ];
             preferences = {
                 "ui.key.menuAccessKeyFocuses" = false;
             };
