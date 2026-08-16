@@ -8,5 +8,9 @@
             };
             nativeMessagingHosts.packages = [ pkgs.uget-integrator ];
         };
+
+        environment.systemPackages = with pkgs; [
+            uget
+        ];
     };
 }
