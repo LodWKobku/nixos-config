@@ -14,7 +14,7 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
     hyprfloat = {
-      url = "github:LodWKobku/hyprfloat/fiximport";
+      url = "github:LodWKobku/hyprfloat/rewrite-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
