@@ -4,7 +4,7 @@
             python313Packages.huggingface-hub
             python313Packages.modelscope
             antigravity-cli
-            opencode
+            self.packages.${pkgs.stdenv.hostPlatform.system}.opencode
         ];
     };
 }
