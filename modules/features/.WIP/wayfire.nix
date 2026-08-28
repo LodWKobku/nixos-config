@@ -3,12 +3,7 @@
         programs.wayfire = {
             enable = true;
             package = self.packages.${pkgs.stdenv.hostPlatform.system}.wayfire;
-            plugins = with pkgs.wayfirePlugins; [
-                wcm
-                wf-shell
-                wayfire-plugins-extra
-            ];
-            # CONFIG IS IN wrappedPrograms/wayfire.nix
+            # Configs are in wrappedPrograms/wayfire.nix
         };
 
         services.greetd = {

@@ -2,7 +2,7 @@
     perSystem = { pkgs, lib, self', ... }: {
         packages.wayfire = inputs.wrappers.lib.wrapPackage {
             inherit pkgs;
-            package = pkgs.wayfire;
+            package = pkgs.wayfire-with-plugins;
             env.WAYFIRE_CONFIG_FILE = "${pkgs.writeText "wayfire.ini" (lib.generators.toINI {} {
                 core = {
                     plugins = "alpha animate autostart command cube decoration expo fast-switcher fisheye foreign-toplevel grid gtk-shell idle invert move oswitch place resize session-lock shortcuts-inhibit switcher vswitch wayfire-shell window-rules wm-actions wobbly wrot zoom";
