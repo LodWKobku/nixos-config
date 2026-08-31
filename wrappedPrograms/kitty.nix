@@ -26,6 +26,22 @@
 
             # Adding alias "cmd" to desktop file for convinience
             aliases = [ "cmd" ];
+            constructFiles.kittyDesktop = {
+                content = (pkgs.makeDesktopItem {
+                        type = "Application";
+                        name = "kitty";
+                        desktopName = "kitty";
+                        genericName = "Terminal emulator";
+                        comment = "Fast, feature-rich, GPU based terminal";
+                        tryExec = "kitty";
+                        startupNotify = true;
+                        exec = "kitty";
+                        icon = "kitty";
+                        categories = [ "System" "TerminalEmulator" ];
+                        keywords = [ "cmd" ];
+                    }).text;
+                relPath = "share/applications/kitty.desktop";
+            };
         };
     };
 }
