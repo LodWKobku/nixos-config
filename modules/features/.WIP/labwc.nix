@@ -1,8 +1,8 @@
 { self, inputs, ... }: {
-    flake.nixosModules.wayfire = { pkgs, lib, config, ... }: {
-        programs.wayfire = {
+    flake.nixosModules.labwc = { pkgs, lib, config, ... }: {
+        programs.labwc = {
             enable = true;
-            package = self.packages.${pkgs.stdenv.hostPlatform.system}.wayfire;
+            package = self.packages.${pkgs.stdenv.hostPlatform.system}.labwc;
             # Configs are in wrappedPrograms/wayfire.nix
         };
 
@@ -10,7 +10,7 @@
             enable = true;
             settings = {
                 default_session = {
-                    command = "${lib.getExe pkgs.tuigreet} --time --cmd wayfire";
+                    command = "${lib.getExe pkgs.tuigreet} --time --user user --cmd labwc";
                     user = "greeter";
                 };
             };

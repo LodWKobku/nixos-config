@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosConfigurations.laptop-wayfire = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.laptop-labwc = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       {
         imports = [
@@ -10,7 +10,7 @@
           self.nixosModules.printer
           
           self.nixosModules.shell
-          self.nixosModules.wayfire
+          self.nixosModules.labwc
           self.nixosModules.virtualbox
           self.nixosModules.docker
           
