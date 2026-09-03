@@ -3,7 +3,16 @@
         packages.labwc = inputs.wrappers.lib.wrapPackage {
             inherit pkgs;
             package = pkgs.labwc;
-            env = {
+            env = 
+            let
+            environment = {
+                XKB_DEFAULT_LAYOUT = "pl";
+            };
+            rc = {
+                test = "sans";
+            };
+            in
+            {
                 XDG_CONFIG_DIRS = pkgs.buildEnv {
                     name = "labwc-config";
                     extraPrefix = "/labwc";
@@ -15,12 +24,14 @@
                             };
                         in [
                             (writeFile {
-                                name = "file1";
-                                text = "placeholder";
+                                name = "environment";
+                                text = lib.generators.toINIWithGlobalSection {} {
+                                    globalSection = environment;
+                                };
                             })
                             (writeFile {
-                                name = "file2";
-                                text = "placeholder";
+                                name = "rc.xml";
+                                text = "${lib.getExe' pkgs.libnixxml "nixexpr2xml"}";
                             })
                         ];
                 };
