@@ -8,9 +8,21 @@
             environment = {
                 XKB_DEFAULT_LAYOUT = "pl";
             };
-            rc = {
-                test = "sans";
-            };
+            rc = ''
+                <?xml version="1.0" ?>
+                <labwc_config>
+                <keyboard>
+                    <default />
+                    <!-- W - super -->
+                    <!-- C - CTRL -->
+                    <!-- A - Alt -->
+                    <!-- S - Shift -->
+                    <keybind key="C-l">
+                        <action name="Execute" command="${pkgs.rofi} -show run" />
+                    </keybind>
+                </keyboard>
+                </labwc_config>
+            '';
             in
             {
                 XDG_CONFIG_DIRS = pkgs.buildEnv {
@@ -31,7 +43,7 @@
                             })
                             (writeFile {
                                 name = "rc.xml";
-                                text = "${lib.getExe' pkgs.libnixxml "nixexpr2xml"}";
+                                text = rc;
                             })
                         ];
                 };
