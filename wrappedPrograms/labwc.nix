@@ -18,14 +18,14 @@
                     <!-- A - Alt -->
                     <!-- S - Shift -->
                     <keybind key="C-l">
-                        <action name="Execute" command="${pkgs.rofi} -show run" />
+                        <action name="Execute" command="${lib.getExe pkgs.rofi} -show run" />
                     </keybind>
                 </keyboard>
                 </labwc_config>
             '';
-            autostart = ''
-                ${lib.getExe pkgs.swaybg} -c '#334455' &
-            '';
+            autostart = [
+                "${lib.getExe pkgs.swaybg} -c '#334455'"
+            ];
             in
             {
                 XDG_CONFIG_DIRS = pkgs.buildEnv {
@@ -50,7 +50,7 @@
                             })
                             (writeFile {
                                 name = "autostart";
-                                text = autostart;
+                                text = lib.strings.concatStringsSep " & " autostart;
                             })
                         ];
                 };
