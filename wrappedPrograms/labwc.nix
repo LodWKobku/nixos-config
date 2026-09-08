@@ -26,6 +26,16 @@
             autostart = [
                 "${lib.getExe pkgs.swaybg} -c '#334455'"
             ];
+            menu = ''
+                <?xml version="1.0" ?>
+                <openbox_menu>
+                    <menu id="root-menu" label="">
+                        <item label="Terminal"><action name="Execute" command="${lib.getExe self'.packages.kitty}"/></item>
+                        <item label="Reconfigure"><action name="Reconfigure"/></item>
+                        <item label="Exit"><action name="Exit"/></item>
+                    </menu>
+                </openbox_menu>
+            '';
             in
             {
                 XDG_CONFIG_DIRS = pkgs.buildEnv {
@@ -51,6 +61,10 @@
                             (writeFile {
                                 name = "autostart";
                                 text = lib.strings.concatStringsSep " & " autostart;
+                            })
+                            (writeFile {
+                                name = "menu.xml";
+                                text = menu;
                             })
                         ];
                 };
