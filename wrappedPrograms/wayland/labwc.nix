@@ -27,6 +27,7 @@
             autostart = [
                 "${lib.getExe pkgs.swaybg} -c '#334455'" # Background
                 "${lib.getExe pkgs.networkmanagerapplet}" # Network Managment
+                (lib.getExe self'.packages.noctalia)
             ];
             menu = ''
                 <?xml version="1.0" ?>
