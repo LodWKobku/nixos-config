@@ -19,7 +19,7 @@
                     <!-- A - Alt -->
                     <!-- S - Shift -->
                     <keybind key="C-l">
-                        <action name="Execute" command="${lib.getExe pkgs.rofi} -show run" />
+                        <action name="Execute" command="${lib.getExe self'.packages.rofi} -show run" />
                     </keybind>
                 </keyboard>
                 </labwc_config>
