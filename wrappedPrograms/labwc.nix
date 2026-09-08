@@ -25,7 +25,8 @@
                 </labwc_config>
             '';
             autostart = [
-                "${lib.getExe pkgs.swaybg} -c '#334455'"
+                "${lib.getExe pkgs.swaybg} -c '#334455'" # Background
+                "${lib.getExe pkgs.networkmanagerapplet}" # Network Managment
             ];
             menu = ''
                 <?xml version="1.0" ?>
