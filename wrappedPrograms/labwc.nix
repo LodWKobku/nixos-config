@@ -6,6 +6,7 @@
             env = 
             let
             environment = {
+                # This is content of envirement file managed by labwc. Using env = {} wrom wrappers is recomended
                 XKB_DEFAULT_LAYOUT = "pl";
             };
             rc = ''
