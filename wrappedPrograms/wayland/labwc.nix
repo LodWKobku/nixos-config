@@ -3,6 +3,9 @@
         packages.labwc = inputs.wrappers.lib.wrapPackage {
             inherit pkgs;
             package = pkgs.labwc;
+            runtimeInputs = [
+                self'.packages.noctalia
+            ];
             env = 
             let
             environment = {
@@ -26,7 +29,7 @@
             '';
             autostart = [
                 "${lib.getExe pkgs.swaybg} -c '#334455'" # Background
-                "${lib.getExe pkgs.networkmanagerapplet}" # Network Managment
+                (lib.getExe pkgs.networkmanagerapplet) # Network Managment
                 (lib.getExe self'.packages.noctalia)
             ];
             menu = ''
