@@ -28,7 +28,7 @@
                 </labwc_config>
             '';
             autostart = [
-                "${lib.getExe pkgs.swaybg} -c '#334455'" # Background
+                "${lib.getExe pkgs.swaybg} -i ${pkgs.nixos-artwork.wallpapers.nineish-catppuccin-frappe}/share/backgrounds/nixos/nix-wallpaper-nineish-catppuccin-frappe.png" # Background
                 (lib.getExe pkgs.networkmanagerapplet) # Network Managment
                 (lib.getExe self'.packages.noctalia)
             ];
