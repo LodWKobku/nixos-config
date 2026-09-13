@@ -25,6 +25,12 @@
                         <action name="Execute" command="${lib.getExe self'.packages.rofi} -show run" />
                     </keybind>
                 </keyboard>
+                <snapping>
+                    <range inner="40" outer="40" />
+                    <overlay enabled="yes">
+                        <delay inner="100" outer="100" />
+                    </overlay>
+                </snapping>
                 </labwc_config>
             '';
             autostart = [
