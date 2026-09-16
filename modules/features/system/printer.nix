@@ -14,7 +14,7 @@
             name = "Canon_TS3300_series";
             location = "";
             deviceUri = "usb://Canon/TS3300%20series?serial=4C3AAE&interface=1";
-            model = "canone3300.ppd";
+            model = "canonts3300.ppd";
             }
         ];
 
