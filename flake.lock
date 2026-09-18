@@ -304,6 +304,22 @@
         "type": "github"
       }
     },
+    "rofi-styles": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780241418,
+        "narHash": "sha256-iUX0Quae06tGd7gDgXZo1B3KYgPHU+ADPBrowHlv02A=",
+        "owner": "adi1090x",
+        "repo": "rofi",
+        "rev": "512a585fff6da5b2a90e5948059b062516ddb2e7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adi1090x",
+        "repo": "rofi",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -311,6 +327,7 @@
         "import-tree": "import-tree",
         "nixpkgs": "nixpkgs",
         "plasma-manager": "plasma-manager",
+        "rofi-styles": "rofi-styles",
         "stylix": "stylix",
         "wrapper-modules": "wrapper-modules",
         "wrappers": "wrappers"
