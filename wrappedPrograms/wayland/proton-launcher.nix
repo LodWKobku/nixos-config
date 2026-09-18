@@ -13,8 +13,14 @@
                     }}/files/launchers/type-3/style-6.rasi";
                 })
             ];
-            text = ''
-                choice=$(echo -e "proton-vpn\x00icon\x1fproton-vpn-logo\nproton-pass\x00icon\x1fproton-pass\nprotonmail-desktop\x00icon\x1fproton-mail" | rofi -show-icons -theme-str "#listview { columns: 3; }" -dmenu -p "Launch Proton App")
+            text = 
+            let
+                proton-apps = pkgs.runCommand "proton-apps" {} ''
+                    printf "proton-vpn\x00icon\x1fproton-vpn-logo\nproton-pass\x00icon\x1fproton-pass\nprotonmail-desktop\x00icon\x1fproton-mail" > $out
+                '';
+            in
+            ''
+                choice=$(rofi -input ${proton-apps} -theme-str "#listview { columns: 3; }" -dmenu -p "Launch Proton App")
 
                 case "$choice" in
                     proton-vpn) exec ${lib.getExe pkgs.proton-vpn} ;;
