@@ -11,7 +11,7 @@
           
           self.nixosModules.shell
           self.nixosModules.labwc
-          self.nixosModules.virtualbox
+          self.nixosModules.virt-manager
           self.nixosModules.docker
           
           self.nixosModules.browser

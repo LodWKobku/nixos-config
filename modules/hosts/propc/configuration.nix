@@ -12,7 +12,7 @@
                 self.nixosModules.shell
                 self.nixosModules.plasma
                 self.nixosModules.stylix
-                self.nixosModules.virtualbox
+                self.nixosModules.virt-manager
                 
                 self.nixosModules.browser
                 self.nixosModules.utils
