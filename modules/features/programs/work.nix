@@ -3,6 +3,7 @@
         environment.systemPackages = with pkgs; [
             libreoffice
             teams-for-linux
+            gimp
         ];
 
         # OBS
