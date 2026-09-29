@@ -14,7 +14,7 @@
                         };
                         user = {
                             name  = "LodWKobku";
-                            email = "lodwkobku@gmail.com";
+                            email = "lodwkobku@proton.me";
                         };
                     };
                 })
