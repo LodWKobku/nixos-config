@@ -3,7 +3,7 @@
     "settingsVersion": 59,
     "bar": {
       "barType": "simple",
-      "position": "bottom",
+      "position": "top",
       "monitors": [],
       "density": "default",
       "showOutline": false,
