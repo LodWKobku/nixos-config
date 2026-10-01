@@ -5,12 +5,16 @@
             package = pkgs.labwc;
             runtimeInputs = [
                 self'.packages.noctalia
+                pkgs.capitaine-cursors
             ];
             env = 
             let
             environment = {
-                # This is content of envirement file managed by labwc. Using env = {} wrom wrappers is recomended
+                # This is content of envirement file managed by labwc. Using env = {} from wrappers is recomended
                 XKB_DEFAULT_LAYOUT = "pl";
+                XCURSOR_THEME = "capitaine-cursors";
+                XCURSOR_SIZE = 30;
+                XCURSOR_PATH = "${pkgs.capitaine-cursors}/share/icons";
             };
             rc = ''
                 <?xml version="1.0" ?>
