@@ -6,14 +6,17 @@
             # Configs are in wrappedPrograms/wayfire.nix
         };
 
-        services.greetd = {
+        services.displayManager.noctalia-greeter = {
             enable = true;
             settings = {
-                default_session = {
-                    command = "${lib.getExe pkgs.tuigreet} --time --user user --cmd labwc";
-                    user = "greeter";
-                };
+                cursor.size = 24;
+                keyboard.layout = "us";
             };
+            # cursorTheme = {
+            #     package = pkgs.bibata-cursors;
+            #     name = "Bibata-Modern-Ice";
+            # };
         };
+
     };
 }
