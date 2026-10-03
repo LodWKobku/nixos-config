@@ -5,16 +5,12 @@
             package = pkgs.labwc;
             runtimeInputs = [
                 self'.packages.noctalia
-                pkgs.capitaine-cursors
             ];
             env = 
             let
             environment = {
                 # This is content of envirement file managed by labwc. Using env = {} from wrappers is recomended
-                XKB_DEFAULT_LAYOUT = "pl";
-                XCURSOR_THEME = "capitaine-cursors";
-                XCURSOR_SIZE = 30;
-                XCURSOR_PATH = "${pkgs.capitaine-cursors}/share/icons";
+                
             };
             rc = ''
                 <?xml version="1.0" ?>
@@ -35,6 +31,20 @@
                         <delay inner="100" outer="100" />
                     </overlay>
                 </snapping>
+                <theme>
+                    <font place="ActiveWindow">
+                        <name>CascadiaCodeNF</name>
+                        <size>10</size>
+                        <slant>normal</slant>
+                        <weight>normal</weight>
+                    </font>
+                    <font place="MenuItem">
+                        <name>CascadiaCodeNF</name>
+                        <size>11</size>
+                        <slant>normal</slant>
+                        <weight>normal</weight>
+                    </font>
+                </theme>
                 </labwc_config>
             '';
             autostart = [
@@ -54,6 +64,15 @@
             '';
             in
             {
+                
+                XCURSOR_THEME = "capitaine-cursors";
+                XCURSOR_SIZE = 30;
+                XCURSOR_PATH = "${pkgs.capitaine-cursors}/share/icons";
+                FONTCONFIG_FILE = pkgs.makeFontsConf {
+                    fontDirectories = [ 
+                        pkgs.cascadia-code
+                    ];
+                };
                 XDG_CONFIG_DIRS = pkgs.buildEnv {
                     name = "labwc-config";
                     extraPrefix = "/labwc";
