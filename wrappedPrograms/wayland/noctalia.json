@@ -222,7 +222,7 @@
       "smoothScrollEnabled": true
     },
     "ui": {
-      "fontDefault": "Noto Sans",
+      "fontDefault": "Cascadia Code NF",
       "fontFixed": "monospace",
       "fontDefaultScale": 1,
       "fontFixedScale": 1,
