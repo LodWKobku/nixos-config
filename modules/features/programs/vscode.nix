@@ -24,6 +24,7 @@
                     "editor.fontFamily"= lib.mkForce "DejaVu Sans Mono, JetBrainsMono NFM, monospace";
                     "terminal.integrated.fontFamily"= "JetBrainsMono NFM";
                     "git.autofetch"= true;
+                    "explorer.confirmDelete"= false;
                     # Discord Rich Presence
                     "vscord.status.problems.enabled"= false;
                 };
