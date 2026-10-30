@@ -65,9 +65,9 @@
             in
             {
                 
-                XCURSOR_THEME = "capitaine-cursors";
+                XCURSOR_THEME = "oreo_pink_cursors";
                 XCURSOR_SIZE = 30;
-                XCURSOR_PATH = "${pkgs.capitaine-cursors}/share/icons";
+                XCURSOR_PATH = "${pkgs.oreo-cursors-plus}/share/icons";
                 FONTCONFIG_FILE = pkgs.makeFontsConf {
                     fontDirectories = [ 
                         pkgs.cascadia-code
