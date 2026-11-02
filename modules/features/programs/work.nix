@@ -5,6 +5,7 @@
             teams-for-linux
             gimp
             distrobox
+            self.packages.${pkgs.stdenv.hostPlatform.system}.matlab
         ];
 
         # OBS
