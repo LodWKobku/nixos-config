@@ -4,6 +4,7 @@
             libreoffice
             teams-for-linux
             gimp
+            distrobox
         ];
 
         # OBS
